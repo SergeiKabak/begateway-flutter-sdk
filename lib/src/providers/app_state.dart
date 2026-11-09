@@ -69,7 +69,7 @@ class AppState extends ChangeNotifier {
   void openWebView({required String url, required String resultUrl}) {
     urlLink = url;
     this.resultUrl = resultUrl;
-    isShowWebview.value = true;
+    setIsShowWebview(true);
     isLoading.value = false;
   }
 

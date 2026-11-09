@@ -5,7 +5,7 @@ import 'package:pay/pay.dart';
 import '../utils/payment_configuration.dart';
 
 class GooglePay extends StatelessWidget {
-  const GooglePay({Key? key}) : super(key: key);
+  const GooglePay({super.key});
 
   @override
   Widget build(BuildContext context) {

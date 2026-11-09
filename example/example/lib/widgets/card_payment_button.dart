@@ -19,9 +19,6 @@ class CardPaymentButton extends StatelessWidget {
       height: 56,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          // shape: RoundedRectangleBorder(
-          //   borderRadius: BorderRadius.circular(8),
-          // ),
           backgroundColor: backgroundColor,
         ),
         onPressed: onPressed,
@@ -29,6 +26,7 @@ class CardPaymentButton extends StatelessWidget {
           buttonText,
           style: const TextStyle(
             fontSize: 16,
+            color: Colors.white,
             fontWeight: FontWeight.w500,
           ),
         ),

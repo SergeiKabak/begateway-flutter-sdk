@@ -21,11 +21,11 @@ class ChoosePay extends StatelessWidget {
   final ValueChanged<String> removeCard;
 
   const ChoosePay({
-    Key? key,
+    super.key,
     required this.savedCards,
     required this.lang,
     required this.removeCard,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -72,16 +72,14 @@ class ChoosePay extends StatelessWidget {
                               buttonText: findTranslation(
                                   appState.config.language.toString(),
                                   "another_card"),
-                              onPressed: () {
-                                Navigator.push(
+                              onPressed: () => Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) => CardPaymentForm(
                                       lang: appState.config.language.toString(),
                                     ),
                                   ),
-                                );
-                              },
+                                ),
                               backgroundColor: Colors.blue[700],
                             ),
                             const SizedBox(height: 12),

@@ -6,9 +6,9 @@ class SecureInfoWidget extends StatefulWidget {
   final String language;
 
   const SecureInfoWidget({
-    Key? key,
+    super.key,
     required this.language,
-  }) : super(key: key);
+  });
 
   @override
   State<SecureInfoWidget> createState() => _SecureInfoWidgetState();

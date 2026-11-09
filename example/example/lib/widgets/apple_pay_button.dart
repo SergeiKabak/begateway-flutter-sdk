@@ -5,7 +5,7 @@ import 'package:pay/pay.dart';
 import '../utils/payment_configuration.dart';
 
 class ApplePay extends StatelessWidget {
-  const ApplePay({Key? key}) : super(key: key);
+  const ApplePay({super.key});
 
   @override
   Widget build(BuildContext context) {

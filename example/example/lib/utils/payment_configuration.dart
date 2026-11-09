@@ -6,8 +6,16 @@ import 'package:pay/pay.dart';
 ///
 /// Раньше кэш жил в `PaymentConfig` ядра — сейчас ядро не зависит
 /// от пакета `pay`, разбор отдан приложению.
-PaymentConfiguration parsePaymentConfiguration(String rawConfiguration) =>
-    _cache.putIfAbsent(rawConfiguration,
-        () => PaymentConfiguration.fromJsonString(rawConfiguration));
+PaymentConfiguration parsePaymentConfiguration(String rawConfiguration) {
+  if (rawConfiguration.isEmpty) {
+    throw ArgumentError.value(
+      rawConfiguration,
+      'rawConfiguration',
+      'Конфигурация платёжной кнопки не может быть пустой',
+    );
+  }
+  return _cache.putIfAbsent(rawConfiguration,
+      () => PaymentConfiguration.fromJsonString(rawConfiguration));
+}
 
 final _cache = <String, PaymentConfiguration>{};
